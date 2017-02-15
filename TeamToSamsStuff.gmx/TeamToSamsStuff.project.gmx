@@ -37,6 +37,7 @@
     <object>objects\obj_dynamite</object>
     <object>objects\obj_explosion</object>
     <object>objects\obj_lasso</object>
+    <object>objects\obj_life_controller</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_game</room>

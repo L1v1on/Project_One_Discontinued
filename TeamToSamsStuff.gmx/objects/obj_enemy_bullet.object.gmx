@@ -65,7 +65,13 @@ state = states.normal;
     break;
     case states.slow:
     speed=0.6
-    
+    if(place_meeting(x,y,obj_shield)){
+        instance_destroy();
+        with(obj_shield){
+            bulletcount++;
+            image_index = bulletcount;
+        }
+    }
     break;
     }
 /*
