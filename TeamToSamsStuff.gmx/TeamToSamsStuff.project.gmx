@@ -44,6 +44,7 @@
     <object>objects\obj_life_controller</object>
     <object>objects\obj_rock_0</object>
     <object>objects\obj_rock_2</object>
+    <object>objects\obj_player_new</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_game</room>
