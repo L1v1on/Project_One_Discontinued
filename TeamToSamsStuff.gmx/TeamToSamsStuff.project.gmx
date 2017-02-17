@@ -16,9 +16,13 @@
     <sprite>sprites\spr_explosion2</sprite>
     <sprite>sprites\spr_lasso</sprite>
     <sprite>sprites\spr_lasso_moving</sprite>
+    <sprite>sprites\spr_rock_0</sprite>
+    <sprite>sprites\spr_rock_1</sprite>
+    <sprite>sprites\spr_rock_2</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_sand</background>
+    <background>background\bg_sand0</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -38,6 +42,8 @@
     <object>objects\obj_explosion</object>
     <object>objects\obj_lasso</object>
     <object>objects\obj_life_controller</object>
+    <object>objects\obj_rock_0</object>
+    <object>objects\obj_rock_2</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_game</room>
