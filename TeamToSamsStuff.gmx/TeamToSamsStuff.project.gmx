@@ -19,6 +19,8 @@
     <sprite>sprites\spr_rock_0</sprite>
     <sprite>sprites\spr_rock_1</sprite>
     <sprite>sprites\spr_rock_2</sprite>
+    <sprite>sprites\spr_inv_slot</sprite>
+    <sprite>sprites\spr_tnt</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_sand</background>
@@ -29,6 +31,9 @@
     <script>scripts\scr_enemy_normal.gml</script>
     <script>scripts\scr_enemy_slow.gml</script>
     <script>scripts\scr_enemy_caught.gml</script>
+    <script>scripts\scr_inventory.gml</script>
+    <script>scripts\scr_item_pickup.gml</script>
+    <script>scripts\scr_item_check.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
@@ -45,6 +50,9 @@
     <object>objects\obj_rock_0</object>
     <object>objects\obj_rock_2</object>
     <object>objects\obj_player_new</object>
+    <object>objects\obj_inventory</object>
+    <object>objects\obj_tnt_pickup</object>
+    <object>objects\obj_lasso_pickup</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_game</room>
