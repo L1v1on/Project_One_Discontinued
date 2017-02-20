@@ -77,7 +77,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle = obj_player.image_angle;
+            <string>//image_angle = obj_player.image_angle;
 image_index = 0;
 image_speed = 0;
 </string>
