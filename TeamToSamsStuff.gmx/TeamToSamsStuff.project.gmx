@@ -25,6 +25,7 @@
   <backgrounds name="background">
     <background>background\bg_sand</background>
     <background>background\bg_sand0</background>
+    <background>background\background2</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
