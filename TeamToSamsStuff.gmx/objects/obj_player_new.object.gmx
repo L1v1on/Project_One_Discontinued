@@ -61,12 +61,32 @@ key_down = keyboard_check(ord('S'));
 key_inventory = keyboard_check_pressed(ord('I'));
 var shootdir = point_direction(x,y,mouse_x,mouse_y);
 
-if(shootdir &lt;315&amp;&amp; shootdir &gt;225){
-    sprite_index = spr_player;
-}
-else if(shootdir &gt;-45&amp;&amp;shootdir  &lt;45){
+
+if(shootdir &gt;-22.5&amp;&amp;shootdir  &lt;22.5){
     sprite_index = spr_player_right;
 }
+else if(shootdir &gt;22.5&amp;&amp;shootdir&lt;67.5){
+    sprite_index = spr_player_upperright;
+}
+else if(shootdir&gt;67.5&amp;&amp;shootdir&lt;112.5){
+    sprite_index = spr_player_back;
+}
+else if(shootdir&gt;112.5&amp;&amp;shootdir&lt;157.5){
+    sprite_index = spr_player_upperleft;
+}
+else if(shootdir&gt;157.5&amp;&amp;shootdir&lt;202.5){
+    sprite_index = spr_player_left;
+}
+else if(shootdir&gt;202.5&amp;&amp;shootdir&lt;247.5){
+    sprite_index = spr_player_lowerleft;
+}
+else if(shootdir&gt;247.5&amp;&amp;shootdir&lt;292.5){
+    sprite_index = spr_player;
+}
+else if(shootdir&gt;292.5&amp;&amp;shootdir&lt;337.5){
+    sprite_index = spr_player_lowerright;
+}   
+/*
 else if(shootdir &gt;45 &amp;&amp; shootdir &lt;135){
     sprite_index = spr_player_back;
 }
@@ -74,7 +94,7 @@ else if (shootdir &gt;135&amp;&amp;shootdir &lt;225){
     sprite_index = spr_player_left;
 }
 
-
+*/
 switch(state){
 
     case states.normal:

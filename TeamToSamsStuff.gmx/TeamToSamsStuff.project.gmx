@@ -26,6 +26,10 @@
     <sprite>sprites\spr_player_back</sprite>
     <sprite>sprites\spr_player_right</sprite>
     <sprite>sprites\spr_player_left</sprite>
+    <sprite>sprites\spr_player_upperright</sprite>
+    <sprite>sprites\spr_player_upperleft</sprite>
+    <sprite>sprites\spr_player_lowerleft</sprite>
+    <sprite>sprites\spr_player_lowerright</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_sand</background>
