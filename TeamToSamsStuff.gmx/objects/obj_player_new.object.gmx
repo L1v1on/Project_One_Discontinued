@@ -59,6 +59,21 @@ key_right = keyboard_check(ord('D'));
 key_up = keyboard_check(ord('W'));
 key_down = keyboard_check(ord('S'));
 key_inventory = keyboard_check_pressed(ord('I'));
+var shootdir = point_direction(x,y,mouse_x,mouse_y);
+
+if(shootdir &lt;315&amp;&amp; shootdir &gt;225){
+    sprite_index = spr_player;
+}
+else if(shootdir &gt;-45&amp;&amp;shootdir  &lt;45){
+    sprite_index = spr_player_right;
+}
+else if(shootdir &gt;45 &amp;&amp; shootdir &lt;135){
+    sprite_index = spr_player_back;
+}
+else if (shootdir &gt;135&amp;&amp;shootdir &lt;225){
+    sprite_index = spr_player_left;
+}
+
 
 switch(state){
 

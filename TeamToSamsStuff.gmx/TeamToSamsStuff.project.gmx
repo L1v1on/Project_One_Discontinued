@@ -23,6 +23,9 @@
     <sprite>sprites\spr_rock_2</sprite>
     <sprite>sprites\spr_inv_slot</sprite>
     <sprite>sprites\spr_tnt</sprite>
+    <sprite>sprites\spr_player_back</sprite>
+    <sprite>sprites\spr_player_right</sprite>
+    <sprite>sprites\spr_player_left</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_sand</background>

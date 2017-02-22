@@ -49,7 +49,7 @@ global.maxhp=100;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>shootdir = point_direction(x,y,mouse_x,mouse_y)-90;
+            <string>shootdir = point_direction(x,y,mouse_x,mouse_y)-270;
 image_angle = shootdir;
 
 slowtime = keyboard_check(vk_space);
