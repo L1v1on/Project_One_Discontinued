@@ -30,6 +30,9 @@
     <sprite>sprites\spr_player_upperleft</sprite>
     <sprite>sprites\spr_player_lowerleft</sprite>
     <sprite>sprites\spr_player_lowerright</sprite>
+    <sprite>sprites\spr_signpost</sprite>
+    <sprite>sprites\spr_message_collider</sprite>
+    <sprite>sprites\spr_breakable_crate</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_sand</background>
@@ -81,6 +84,14 @@
     <object>objects\obj_inventory</object>
     <object>objects\obj_tnt_pickup</object>
     <object>objects\obj_lasso_pickup</object>
+    <object>objects\obj_signpost</object>
+    <objects name="Messages">
+      <objects name="group">
+        <object>objects\obj_message_tutorial_shoot</object>
+        <object>objects\obj_message_tutorial_test</object>
+      </objects>
+    </objects>
+    <object>objects\obj_breakable_crate</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_game1</room>
