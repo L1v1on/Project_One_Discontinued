@@ -62,29 +62,60 @@ key_inventory = keyboard_check_pressed(ord('I'));
 var shootdir = point_direction(x,y,mouse_x,mouse_y);
 
 
+
+
+
+
+
+
+
+
 if(shootdir &gt;-22.5&amp;&amp;shootdir  &lt;22.5){
     sprite_index = spr_player_right;
+    //spr_player_right
+    lenx = 11;
+    leny = 5;
 }
 else if(shootdir &gt;22.5&amp;&amp;shootdir&lt;67.5){
     sprite_index = spr_player_upperright;
+    //spr_player_upperright
+    lenx = 16;
+    leny = -4;
 }
 else if(shootdir&gt;67.5&amp;&amp;shootdir&lt;112.5){
     sprite_index = spr_player_back;
+    lenx = 0;
+    leny = 0;
 }
 else if(shootdir&gt;112.5&amp;&amp;shootdir&lt;157.5){
     sprite_index = spr_player_upperleft;
+    //spr_player_upperleft
+    lenx = -16;
+    leny = -4;
 }
 else if(shootdir&gt;157.5&amp;&amp;shootdir&lt;202.5){
     sprite_index = spr_player_left;
+    //spr_player_left
+    lenx = -11;
+    leny = 5;
 }
 else if(shootdir&gt;202.5&amp;&amp;shootdir&lt;247.5){
     sprite_index = spr_player_lowerleft;
+    //spr_player_lowerleft
+    lenx = -16;
+    leny = 10;
 }
 else if(shootdir&gt;247.5&amp;&amp;shootdir&lt;292.5){
     sprite_index = spr_player;
+    //spr_player
+    lenx = -9;
+    leny = 20;
 }
 else if(shootdir&gt;292.5&amp;&amp;shootdir&lt;337.5){
     sprite_index = spr_player_lowerright;
+    //spr_player_lowerright
+    lenx = 16;
+    leny = 10;
 }   
 /*
 else if(shootdir &gt;45 &amp;&amp; shootdir &lt;135){
@@ -178,11 +209,11 @@ if(key_inventory)
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0</string>
+            <string>lenx</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0</string>
+            <string>leny</string>
           </argument>
         </arguments>
       </action>

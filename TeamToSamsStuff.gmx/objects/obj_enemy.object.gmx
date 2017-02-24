@@ -52,7 +52,7 @@
 image_angle = shootdir-90;
 
 
-
+/*
 switch(state){
     case states.normal:
     scr_enemy_normal();
@@ -62,7 +62,7 @@ switch(state){
     break;
 
 }
-
+*/
 </string>
           </argument>
         </arguments>

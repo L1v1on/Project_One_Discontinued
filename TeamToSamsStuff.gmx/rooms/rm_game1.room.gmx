@@ -57,6 +57,10 @@
     <instance objName="obj_inventory" x="0" y="0" name="inst_C151056D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_crosshair" x="32" y="0" name="inst_23FB46A5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player_new" x="4608" y="3424" name="inst_1F6ABAD6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_tnt_pickup" x="4384" y="3200" name="inst_A4FA2732" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_tnt_pickup" x="4640" y="3168" name="inst_F308FEA2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_tnt_pickup" x="4480" y="3072" name="inst_41935D40" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_tnt_pickup" x="4800" y="3264" name="inst_14FF2EC2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
