@@ -104,7 +104,7 @@ draw_healthbar(view_xview+8,view_yview+32,view_xview+72,view_yview+48,pc,c_black
           </argument>
           <argument>
             <kind>5</kind>
-            <sprite>spr_player</sprite>
+            <sprite>spr_life</sprite>
           </argument>
         </arguments>
       </action>

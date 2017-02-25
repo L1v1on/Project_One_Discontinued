@@ -33,6 +33,7 @@
     <sprite>sprites\spr_signpost</sprite>
     <sprite>sprites\spr_message_collider</sprite>
     <sprite>sprites\spr_breakable_crate</sprite>
+    <sprite>sprites\spr_life</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_sand</background>
@@ -89,9 +90,11 @@
       <objects name="group">
         <object>objects\obj_message_tutorial_shoot</object>
         <object>objects\obj_message_tutorial_test</object>
+        <object>objects\obj_message_tutorial_inventory</object>
+        <object>objects\obj_message_tutorial_throw_dynamite</object>
       </objects>
     </objects>
-    <object>objects\obj_breakable_crate</object>
+    <object>objects\obj_breakable_crate_dynamite</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_game1</room>

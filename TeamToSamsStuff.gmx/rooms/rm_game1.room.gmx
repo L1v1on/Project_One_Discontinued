@@ -63,8 +63,15 @@
     <instance objName="obj_tnt_pickup" x="4800" y="3264" name="inst_14FF2EC2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_signpost" x="4672" y="3680" name="inst_78E38158" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_message_tutorial_shoot" x="4672" y="3680" name="inst_1FC25E2F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_breakable_crate" x="4512" y="3584" name="inst_40D212AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_breakable_crate" x="4480" y="3616" name="inst_6BB6125F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_breakable_crate_dynamite" x="4512" y="3584" name="inst_40D212AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_breakable_crate_dynamite" x="4480" y="3616" name="inst_6BB6125F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_signpost" x="4480" y="3520" name="inst_2F15904A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_message_tutorial_inventory" x="4480" y="3520" name="inst_46023D2D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_signpost" x="4480" y="3424" name="inst_612ADC2C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_message_tutorial_throw_dynamite" x="4480" y="3424" name="inst_F79903FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_life_controller" x="64" y="0" name="inst_4597A289" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rock_0" x="4480" y="3744" name="inst_ACAAE6EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rock_0" x="4672" y="3520" name="inst_B79EAA50" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="Tileset" x="4576" y="3808" w="32" h="32" xo="0" yo="0" id="10000001" name="inst_9EB5716A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

@@ -30,6 +30,9 @@ key_right = keyboard_check(ord('D'));
 key_up = keyboard_check(ord('W'));
 key_down = keyboard_check(ord('S'));
 key_inventory = keyboard_check_pressed(ord('I'));
+global.ammo = 100;
+global.hp=100;
+global.maxhp=100;
 
 state=states.normal;
 </string>
