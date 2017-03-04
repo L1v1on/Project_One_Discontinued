@@ -34,10 +34,8 @@
     <sprite>sprites\spr_message_collider</sprite>
     <sprite>sprites\spr_breakable_crate</sprite>
     <sprite>sprites\spr_life</sprite>
- HEAD
     <sprite>sprites\spr_test_boss</sprite>
     <sprite>sprites\spr_boss_bullets</sprite>
-
     <sprite>sprites\spr_dynamite_new</sprite>
     <sprite>sprites\spr_dynamite_pickup</sprite>
     <sprite>sprites\spr_gun_pistol</sprite>
@@ -55,7 +53,6 @@
     <sprite>sprites\spr_player_right_new</sprite>
     <sprite>sprites\spr_player_down_right_new</sprite>
     <sprite>sprites\spr_sheet_1</sprite>
- origin/master
   </sprites>
   <backgrounds name="background">
     <background>background\bg_sand</background>
