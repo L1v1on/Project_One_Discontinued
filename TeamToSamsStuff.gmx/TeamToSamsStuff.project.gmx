@@ -34,8 +34,28 @@
     <sprite>sprites\spr_message_collider</sprite>
     <sprite>sprites\spr_breakable_crate</sprite>
     <sprite>sprites\spr_life</sprite>
+ HEAD
     <sprite>sprites\spr_test_boss</sprite>
     <sprite>sprites\spr_boss_bullets</sprite>
+
+    <sprite>sprites\spr_dynamite_new</sprite>
+    <sprite>sprites\spr_dynamite_pickup</sprite>
+    <sprite>sprites\spr_gun_pistol</sprite>
+    <sprite>sprites\spr_gun_pickup</sprite>
+    <sprite>sprites\spr_cactus</sprite>
+    <sprite>sprites\spr_tree_trunk</sprite>
+    <sprite>sprites\spr_snake_unfinished</sprite>
+    <sprite>sprites\spr_player_idle_new</sprite>
+    <sprite>sprites\spr_player_down_new</sprite>
+    <sprite>sprites\spr_player_down_left_new</sprite>
+    <sprite>sprites\spri_player_left_new</sprite>
+    <sprite>sprites\spr_player_up_left_new</sprite>
+    <sprite>sprites\spr_player_up_new</sprite>
+    <sprite>sprites\spr_player_up_right_new</sprite>
+    <sprite>sprites\spr_player_right_new</sprite>
+    <sprite>sprites\spr_player_down_right_new</sprite>
+    <sprite>sprites\spr_sheet_1</sprite>
+ origin/master
   </sprites>
   <backgrounds name="background">
     <background>background\bg_sand</background>
@@ -58,6 +78,10 @@
     <background>background\Tile14</background>
     <background>background\Tile15</background>
     <background>background\tile16</background>
+    <background>background\bg_norm_sand_tile</background>
+    <background>background\bg_red_sand_tile</background>
+    <background>background\bg_purp_sand_tile</background>
+    <background>background\bg_blue_sand_tile</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -104,6 +128,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_game1</room>
+    <room>rooms\rm_test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
