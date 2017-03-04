@@ -120,15 +120,6 @@ else if(shootdir&gt;292.5&amp;&amp;shootdir&lt;337.5){
     lenx = 16;
     leny = 10;
 }   
-/*
-else if(shootdir &gt;45 &amp;&amp; shootdir &lt;135){
-    sprite_index = spr_player_back;
-}
-else if (shootdir &gt;135&amp;&amp;shootdir &lt;225){
-    sprite_index = spr_player_left;
-}
-
-*/
 switch(state){
 
     case states.normal:

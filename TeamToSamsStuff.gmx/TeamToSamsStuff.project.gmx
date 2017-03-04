@@ -34,6 +34,8 @@
     <sprite>sprites\spr_message_collider</sprite>
     <sprite>sprites\spr_breakable_crate</sprite>
     <sprite>sprites\spr_life</sprite>
+    <sprite>sprites\spr_test_boss</sprite>
+    <sprite>sprites\spr_boss_bullets</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_sand</background>
@@ -76,6 +78,7 @@
     <object>objects\obj_enemy_bullet</object>
     <object>objects\obj_shield</object>
     <object>objects\obj_dynamite</object>
+    <object>objects\obj_enemy_dynamite</object>
     <object>objects\obj_explosion</object>
     <object>objects\obj_lasso</object>
     <object>objects\obj_life_controller</object>
@@ -95,6 +98,9 @@
       </objects>
     </objects>
     <object>objects\obj_breakable_crate_dynamite</object>
+    <object>objects\obj_test_boss</object>
+    <object>objects\obj_boss_bullet</object>
+    <object>objects\obj_boss_bullet_pattern</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_game1</room>
