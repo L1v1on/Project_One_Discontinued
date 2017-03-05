@@ -79,6 +79,7 @@
     <background>background\bg_red_sand_tile</background>
     <background>background\bg_purp_sand_tile</background>
     <background>background\bg_blue_sand_tile</background>
+    <background>background\bg_sand_test</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">

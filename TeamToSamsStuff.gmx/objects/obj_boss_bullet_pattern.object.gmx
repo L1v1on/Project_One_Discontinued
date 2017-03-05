@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//direction=point_direction(x,y,obj_player_new.x,obj_player_new.y);
+            <string>direction=global.shootangle;
 speed= 4;
 
 state = states.normal;
-shootangle=225;
+
 </string>
           </argument>
         </arguments>
