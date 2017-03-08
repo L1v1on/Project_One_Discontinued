@@ -147,6 +147,10 @@
     <object>objects\obj_shield</object>
     <object>objects\obj_signpost</object>
     <object>objects\obj_tnt_pickup</object>
+    <object>objects\obj_boss_bullet</object>
+    <object>objects\obj_boss_bullet_pattern</object>
+    <object>objects\obj_test_boss</object>
+    <object>objects\obj_enemy_dynamite</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_game1</room>
