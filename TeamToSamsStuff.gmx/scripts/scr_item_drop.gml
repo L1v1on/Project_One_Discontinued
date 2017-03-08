@@ -5,8 +5,9 @@ for (i = 0; i < global.maxItems; i += 1)
     if (global.inventory[i,0] == argument0) //If slot contains same item ID
     {
         global.inventory[i,2] += argument2; //Add to current count.
-        if(global.inventory[i,2]==0){
-            global.inventory[i,0]=0;
+        if(global.inventory[i,2]==0){ //If number of items is 0.
+            argument1 = -1; //Set sprite for item to nil.
+            global.inventory[i,0]=0; //Set item ID to 0.
         }
         //instance_destroy(); //Destroy instance of picked up item.
         return(1); //Ends script, returns a 1 to caller if sucessful
