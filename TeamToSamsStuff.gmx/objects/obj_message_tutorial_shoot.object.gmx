@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>messageText = 'Press the spacebar/left mb to shoot #your gun. Try it now on those crates.';
+            <string>messageText = 'Press the spacebar/left mb to shoot your gun. Try it now on those crates.';
 </string>
           </argument>
         </arguments>
@@ -50,9 +50,9 @@
             <kind>1</kind>
             <string>if(place_meeting(x,y,obj_player_new)){
     x1 = view_xview[0]; //View 0 in room
-    y1 = view_yview[0]+336;
+    y1 = view_yview[0] + view_hview[0]; //Get bottem left of view.
     x2 = x1 + view_wview[0]; 
-    y2 = y1 + 64;
+    y2 = y1 - 64;
 
     draw_set_color(c_black);
     draw_set_alpha(0.8);
@@ -60,7 +60,7 @@
     draw_set_alpha(1);
     draw_set_font(fnt_game_text);
     draw_set_color(c_white);
-    draw_text(x1+32,y1+20,string(messageText));
+    draw_text(x1+32,y1-40,string(messageText));
     }
 </string>
           </argument>
