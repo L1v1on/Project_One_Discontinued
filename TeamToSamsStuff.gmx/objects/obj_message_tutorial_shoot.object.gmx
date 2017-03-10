@@ -58,9 +58,9 @@
     draw_set_alpha(0.8);
     draw_rectangle(x1,y1,x2,y2,0);
     draw_set_alpha(1);
-    
+    draw_set_font(fnt_game_text);
     draw_set_color(c_white);
-    draw_text(x1+32,y1+15,string(messageText));
+    draw_text(x1+32,y1+20,string(messageText));
     }
 </string>
           </argument>

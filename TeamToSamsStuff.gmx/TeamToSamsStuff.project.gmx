@@ -80,6 +80,7 @@
       <sprite>sprites\spr_crosshair</sprite>
       <sprite>sprites\spr_inv_slot</sprite>
       <sprite>sprites\spr_life</sprite>
+      <sprite>sprites\spr_menu_arrow</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -118,14 +119,19 @@
     <script>scripts\scr_item_check.gml</script>
     <script>scripts\scr_item_drop.gml</script>
     <script>scripts\scr_item_pickup.gml</script>
+    <script>scripts\scr_menu.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_game_text</font>
+    <font>fonts\fnt_menu</font>
+  </fonts>
   <objects name="objects">
     <objects name="Messages">
       <objects name="group">
         <object>objects\obj_message_tutorial_shoot</object>
-        <object>objects\obj_message_tutorial_test</object>
         <object>objects\obj_message_tutorial_inventory</object>
         <object>objects\obj_message_tutorial_throw_dynamite</object>
+        <object>objects\obj_message_tutorial_test</object>
       </objects>
     </objects>
     <object>objects\obj_breakable_crate_dynamite</object>
@@ -147,9 +153,11 @@
     <object>objects\obj_shield</object>
     <object>objects\obj_signpost</object>
     <object>objects\obj_tnt_pickup</object>
+    <object>objects\obj_main_menu</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_game1</room>
+    <room>rooms\rm_main_menu</room>
+    <room>rooms\rm_desert</room>
     <room>rooms\rm_test</room>
   </rooms>
   <help>
