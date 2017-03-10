@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>messageText = 'Press the spacebar to shoot your gun,# try it now on those crates over there';
+            <string>messageText = 'Press the spacebar/left mb to shoot #your gun. Try it now on those crates.';
 </string>
           </argument>
         </arguments>

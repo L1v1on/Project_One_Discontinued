@@ -25,12 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>key_left = keyboard_check(ord('A'));
-key_right = keyboard_check(ord('D'));
-key_up = keyboard_check(ord('W'));
-key_down = keyboard_check(ord('S'));
-key_inventory = keyboard_check_pressed(ord('I'));
-global.ammo = 100;
+            <string>global.ammo = 100;
 global.hp=100;
 global.maxhp=100;
 
@@ -81,11 +76,12 @@ sprite_index = spr_player_idle_new;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>key_left = keyboard_check(ord('A'));
-key_right = keyboard_check(ord('D'));
-key_up = keyboard_check(ord('W'));
-key_down = keyboard_check(ord('S'));
+            <string>key_left = keyboard_check(ord('A')) || keyboard_check(vk_left);
+key_right = keyboard_check(ord('D')) || keyboard_check(vk_right);
+key_up = keyboard_check(ord('W')) || keyboard_check(vk_up);
+key_down = keyboard_check(ord('S')) || keyboard_check(vk_down);
 key_inventory = keyboard_check_pressed(ord('I'));
+key_shoot = mouse_check_button_pressed(mb_left) || keyboard_check_pressed(vk_space);
 var shootdir = point_direction(x,y,mouse_x,mouse_y);
 
 /*
@@ -94,67 +90,112 @@ Giving image_index the index of the sub-image to use.
 shootdir will hold a value from 0 to 360 depending on mouse position on screen.
 Changing back to idle sprite from any action sprite is handled with the alarm event on object.
 */
-
 if(shootdir &gt; 330||shootdir  &lt;22.5){
     image_index = 6; //Face right
     lenx = 11;
-    leny = 5;
-    if(keyboard_check_pressed(vk_space)) //Change to shooting sprite
+    leny = 1;
+    if(key_shoot &amp;&amp; global.ammo &gt; 0) //Change to shooting sprite
+    {
+        alarm[0] = 1 * room_speed;
+        //play some sound here
+        instance_create(obj_player_new.x + lenx, obj_player_new.y + leny, obj_bullet);
         sprite_index = spr_player_shoot;
+    }
 }
 else if(shootdir &gt;22.5&amp;&amp;shootdir&lt;67.5){
     image_index = 5; //Face upper right
     lenx = 16;
     leny = -4;
-    if(keyboard_check_pressed(vk_space)) //Change to shooting sprite
+    if(key_shoot &amp;&amp; global.ammo &gt; 0) //Change to shooting sprite
+    {
+        alarm[0] = 1 * room_speed;
+        //play some sound here
+        instance_create(obj_player_new.x + lenx, obj_player_new.y + leny, obj_bullet);
         sprite_index = spr_player_shoot;
+    }
 }
 else if(shootdir&gt;67.5&amp;&amp;shootdir&lt;112.5){
     image_index = 4; //Face up
     lenx = 0;
     leny = 0;
-    if(keyboard_check_pressed(vk_space)) //Change to shooting sprite
+    if(key_shoot &amp;&amp; global.ammo &gt; 0) //Change to shooting sprite
+    {
+        alarm[0] = 1 * room_speed;
+        //play some sound here
+        instance_create(obj_player_new.x + lenx, obj_player_new.y + leny, obj_bullet);
         sprite_index = spr_player_shoot;
+    }
 }
 else if(shootdir&gt;112.5&amp;&amp;shootdir&lt;157.5){
     image_index = 3; //Face upper left
     lenx = -16;
     leny = -4;
-    if(keyboard_check_pressed(vk_space)) //Change to shooting sprite
+    if(key_shoot &amp;&amp; global.ammo &gt; 0) //Change to shooting sprite
+    {
+        alarm[0] = 1 * room_speed;
+        //play some sound here
+        instance_create(obj_player_new.x + lenx, obj_player_new.y + leny, obj_bullet);
         sprite_index = spr_player_shoot;
+    }
 }
 else if(shootdir&gt;157.5&amp;&amp;shootdir&lt;202.5){
     image_index = 2; //Face left
     lenx = -11;
     leny = 5;
-    if(keyboard_check_pressed(vk_space)) //Change to shooting sprite
+    if(key_shoot &amp;&amp; global.ammo &gt; 0) //Change to shooting sprite
+    {
+        alarm[0] = 1 * room_speed;
+        //play some sound here
+        instance_create(obj_player_new.x + lenx, obj_player_new.y + leny, obj_bullet);
         sprite_index = spr_player_shoot;
+    }
 }
 else if(shootdir&gt;202.5&amp;&amp;shootdir&lt;247.5){
     image_index = 1; //Face lower left
     lenx = -16;
     leny = 10;
-    if(keyboard_check_pressed(vk_space)) //Change to shooting sprite
+    if(key_shoot &amp;&amp; global.ammo &gt; 0) //Change to shooting sprite
+    {
+        alarm[0] = 1 * room_speed;
+        //play some sound here
+        instance_create(obj_player_new.x + lenx, obj_player_new.y + leny, obj_bullet);
         sprite_index = spr_player_shoot;
+    }
 }
 else if(shootdir&gt;247.5&amp;&amp;shootdir&lt;292.5){
     image_index = 0; //Face down
     lenx = -9;
     leny = 20;
-    if(keyboard_check_pressed(vk_space)) //Change to shooting sprite
+    if(key_shoot &amp;&amp; global.ammo &gt; 0) //Change to shooting sprite
+    {
+        alarm[0] = 1 * room_speed;
+        //play some sound here
+        instance_create(obj_player_new.x + lenx, obj_player_new.y + leny, obj_bullet);
         sprite_index = spr_player_shoot;
+    }
 }
 else if(shootdir&gt;292.5&amp;&amp;shootdir&lt;330){
     image_index = 7; //Face lower right
     lenx = 0;
     leny = 12;
-    if(keyboard_check_pressed(vk_space)) //Change to shooting sprite
+    if(key_shoot &amp;&amp; global.ammo &gt; 0) //Change to shooting sprite
+    {
+        alarm[0] = 1 * room_speed;
+        //play some sound here
+        instance_create(obj_player_new.x + lenx, obj_player_new.y + leny, obj_bullet);
         sprite_index = spr_player_shoot;
+    }
 }
 
+
 //Trying to get movement animation to work right
-if (key_left) 
+/*if (key_left) 
+{
     sprite_index = spr_player_left_new; //Mouse changes sub image of sprite. Animation wont play.
+    image_index = 0;
+    image_speed = 0.3;
+}
+*/
 
 switch(state){
 
@@ -256,7 +297,7 @@ if(key_inventory)
         <isnot>0</isnot>
       </action>
     </event>
-    <event eventtype="9" enumb="90">
+    <event eventtype="6" enumb="54">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -285,15 +326,15 @@ if(key_inventory)
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="32">
+    <event eventtype="9" enumb="90">
       <action>
         <libid>1</libid>
-        <id>605</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
@@ -302,59 +343,14 @@ if(key_inventory)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Alarm for changing sprite</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>1 * room_speed</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>201</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_create_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>-1</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>10</kind>
-            <object>obj_bullet</object>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>lenx</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>leny</string>
+            <string>if(scr_item_check(3)==1){
+    instance_create(x,y,obj_dynamite);
+    
+    scr_item_drop(3,object_get_sprite(obj_tnt_pickup),-1);
+    
+    
+}
+</string>
           </argument>
         </arguments>
       </action>
