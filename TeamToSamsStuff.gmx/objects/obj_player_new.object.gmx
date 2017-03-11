@@ -28,8 +28,13 @@
             <string>global.ammo = 100;
 global.hp=100;
 global.maxhp=100;
-
-state=states.normal;
+enum actions 
+{
+    idle,
+    moving
+}
+action = actions.idle;
+state = states.normal; //states is created when rm_desert is created
 </string>
           </argument>
         </arguments>
@@ -76,20 +81,30 @@ sprite_index = spr_player_idle_new;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>key_left = keyboard_check(ord('A')) || keyboard_check(vk_left);
-key_right = keyboard_check(ord('D')) || keyboard_check(vk_right);
-key_up = keyboard_check(ord('W')) || keyboard_check(vk_up);
-key_down = keyboard_check(ord('S')) || keyboard_check(vk_down);
-key_inventory = keyboard_check_pressed(ord('I'));
-key_shoot = mouse_check_button_pressed(mb_left) || keyboard_check_pressed(vk_space);
-var shootdir = point_direction(x,y,mouse_x,mouse_y);
+            <string>scr_player_input(); //Get player input
+//var shootdir = point_direction(x,y,mouse_x,mouse_y);
+if(key_left || key_right || key_up || key_down)
+    action = actions.moving;
+else
+    action = actions.idle;
+switch(action)
+{
+    case actions.idle:
+    scr_player_idle();
+    break;
+    
+    case actions.moving:
+    scr_player_moving();
+    break;
+}
+
 
 /*
 Player facing is based on mouse position, using sub-images of obj's sprite.
 Giving image_index the index of the sub-image to use.
 shootdir will hold a value from 0 to 360 depending on mouse position on screen.
 Changing back to idle sprite from any action sprite is handled with the alarm event on object.
-*/
+
 if(shootdir &gt; 330||shootdir  &lt;22.5){
     image_index = 6; //Face right
     lenx = 11;
@@ -186,7 +201,7 @@ else if(shootdir&gt;292.5&amp;&amp;shootdir&lt;330){
         sprite_index = spr_player_shoot;
     }
 }
-
+*/
 
 //Trying to get movement animation to work right
 /*if (key_left) 
@@ -196,7 +211,7 @@ else if(shootdir&gt;292.5&amp;&amp;shootdir&lt;330){
     image_speed = 0.3;
 }
 */
-
+/*
 switch(state){
 
     case states.normal:
@@ -216,7 +231,7 @@ switch(state){
 
 
 }
-
+*/
 if(key_inventory)
 {
     if(global.showInv == true)

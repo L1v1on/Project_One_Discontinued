@@ -120,6 +120,9 @@
     <script>scripts\scr_item_drop.gml</script>
     <script>scripts\scr_item_pickup.gml</script>
     <script>scripts\scr_menu.gml</script>
+    <script>scripts\scr_player_idle.gml</script>
+    <script>scripts\scr_player_moving.gml</script>
+    <script>scripts\scr_player_input.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_game_text</font>
