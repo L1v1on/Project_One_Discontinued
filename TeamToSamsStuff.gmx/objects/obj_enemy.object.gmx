@@ -50,12 +50,16 @@
             <kind>1</kind>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <string>shootdir = point_direction(x,y,obj_player_new.x,obj_player_new.y);
 =======
             <string>//Need to make guy shoot and only really respond to player when within a certain distance.
 
 shootdir = point_direction(x,y,obj_player_new.x,obj_player_new.y);
 >>>>>>> 6c0071cd5a8143f1763b8b8f9be7e3b826c51ff9
+=======
+            <string>shootdir = point_direction(x,y,obj_player.x,obj_player.y);
+>>>>>>> parent of 3c529f6... allu snackbar
 =======
             <string>shootdir = point_direction(x,y,obj_player.x,obj_player.y);
 >>>>>>> parent of 3c529f6... allu snackbar

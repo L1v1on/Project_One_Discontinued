@@ -66,6 +66,7 @@
     <instance objName="obj_inventory" x="64" y="0" name="inst_D619BE7F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <instance objName="obj_enemy" x="4960" y="3424" name="inst_9D7E4527" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spawner" x="4288" y="3392" name="inst_0D4055B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
 =======
@@ -74,6 +75,8 @@
     <instance objName="obj_enemy" x="4160" y="3520" name="inst_C2E6A397" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_npc" x="4704" y="3648" name="inst_A27243B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
 >>>>>>> 6c0071cd5a8143f1763b8b8f9be7e3b826c51ff9
+=======
+>>>>>>> parent of 3c529f6... allu snackbar
 =======
 >>>>>>> parent of 3c529f6... allu snackbar
   </instances>
