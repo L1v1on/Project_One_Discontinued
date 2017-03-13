@@ -101,7 +101,6 @@
     <background>background\Tile7</background>
     <background>background\Tile8</background>
     <background>background\Tile9</background>
- HEAD
     <background>background\Tile10</background>
     <background>background\Tile11</background>
     <background>background\Tile12</background>
@@ -110,9 +109,7 @@
     <background>background\Tile15</background>
     <background>background\tile16</background>
     <background>background\bg_sand_test</background>
-=======
     <background>background\Tileset</background>
- origin/master
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -153,7 +150,6 @@
     <object>objects\obj_lasso</object>
     <object>objects\obj_lasso_pickup</object>
     <object>objects\obj_life_controller</object>
-    <object>objects\obj_player</object>
     <object>objects\obj_player_new</object>
     <object>objects\obj_rock_0</object>
     <object>objects\obj_rock_2</object>
