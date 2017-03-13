@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>messageText = 'Press the Z key to throw that#dynamite you just picked up';
+            <string>messageText = 'Press Z/right mb to throw that dynamite you just picked up.';
 </string>
           </argument>
         </arguments>

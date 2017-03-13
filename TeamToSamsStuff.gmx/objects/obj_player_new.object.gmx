@@ -25,16 +25,40 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>key_left = keyboard_check(ord('A'));
-key_right = keyboard_check(ord('D'));
-key_up = keyboard_check(ord('W'));
-key_down = keyboard_check(ord('S'));
-key_inventory = keyboard_check_pressed(ord('I'));
-global.ammo = 100;
+            <string>global.ammo = 100;
 global.hp=100;
 global.maxhp=100;
-
-state=states.normal;
+enum actions 
+{
+    idle,
+    moving
+}
+action = actions.idle;
+state = states.normal; //states is created when rm_desert is created
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//This code sets the players sprite back to his idle after an action.
+sprite_index = spr_player_idle_new;
 </string>
           </argument>
         </arguments>
@@ -57,65 +81,27 @@ state=states.normal;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>key_left = keyboard_check(ord('A'));
-key_right = keyboard_check(ord('D'));
-key_up = keyboard_check(ord('W'));
-key_down = keyboard_check(ord('S'));
-key_inventory = keyboard_check_pressed(ord('I'));
-var shootdir = point_direction(x,y,mouse_x,mouse_y);
+            <string>scr_player_input(); //Get player input
 
+//Switch case based on if moving or not
+if(key_left || key_right || key_up || key_down)
+    action = actions.moving;
+else
+    action = actions.idle;
+    
+switch(action)
+{
+    case actions.idle:
+    scr_player_idle();
+    break;
+    
+    case actions.moving:
+    scr_player_moving();
+    break;
+}
 
-
-
-
-
-
-
+//The case for the slowdown?
 /*
-Player facing is based on mouse position, using sub-images of obj's sprite.
-Giving image_index the index of the sub-image to use.
-shootdir will hold a value from 0 to 360 depending on mouse position on screen.
-*/
-if(shootdir &gt; 330||shootdir  &lt;22.5){
-    image_index = 6; //Face right
-    lenx = 11;
-    leny = 5;
-}
-else if(shootdir &gt;22.5&amp;&amp;shootdir&lt;67.5){
-    image_index = 5; //Face upper right
-    lenx = 16;
-    leny = -4;
-}
-else if(shootdir&gt;67.5&amp;&amp;shootdir&lt;112.5){
-    image_index = 4; //Face up
-    lenx = 0;
-    leny = 0;
-}
-else if(shootdir&gt;112.5&amp;&amp;shootdir&lt;157.5){
-    image_index = 3; //Face upper left
-    lenx = -16;
-    leny = -4;
-}
-else if(shootdir&gt;157.5&amp;&amp;shootdir&lt;202.5){
-    image_index = 2; //Face left
-    lenx = -11;
-    leny = 5;
-}
-else if(shootdir&gt;202.5&amp;&amp;shootdir&lt;247.5){
-    image_index = 1; //Face lower left
-    lenx = -16;
-    leny = 10;
-}
-else if(shootdir&gt;247.5&amp;&amp;shootdir&lt;292.5){
-    image_index = 0; //Face down
-    lenx = -9;
-    leny = 20;
-}
-else if(shootdir&gt;292.5&amp;&amp;shootdir&lt;330){
-    image_index = 7; //Face lower right
-    lenx = 16;
-    leny = 10;
-}   
 switch(state){
 
     case states.normal:
@@ -135,7 +121,7 @@ switch(state){
 
 
 }
-
+*/
 if(key_inventory)
 {
     if(global.showInv == true)
@@ -216,7 +202,7 @@ if(key_inventory)
         <isnot>0</isnot>
       </action>
     </event>
-    <event eventtype="9" enumb="90">
+    <event eventtype="6" enumb="54">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -245,32 +231,31 @@ if(key_inventory)
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="32">
+    <event eventtype="9" enumb="90">
       <action>
         <libid>1</libid>
-        <id>201</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_create_object</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
-        <relative>-1</relative>
+        <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>10</kind>
-            <object>obj_bullet</object>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>lenx</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>leny</string>
+            <kind>1</kind>
+            <string>if(scr_item_check(3)==1){
+    instance_create(x,y,obj_dynamite);
+    
+    scr_item_drop(3,object_get_sprite(obj_tnt_pickup),-1);
+    
+    
+}
+</string>
           </argument>
         </arguments>
       </action>
