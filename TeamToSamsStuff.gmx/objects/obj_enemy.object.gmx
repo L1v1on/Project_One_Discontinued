@@ -48,7 +48,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
+<<<<<<< HEAD
             <string>shootdir = point_direction(x,y,obj_player_new.x,obj_player_new.y);
+=======
+            <string>//Need to make guy shoot and only really respond to player when within a certain distance.
+
+shootdir = point_direction(x,y,obj_player_new.x,obj_player_new.y);
+>>>>>>> 6c0071cd5a8143f1763b8b8f9be7e3b826c51ff9
 image_angle = shootdir-90;
 
 
@@ -96,6 +102,22 @@ switch(state){
             <string>0</string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_explosion">
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="4" ename="obj_bullet">

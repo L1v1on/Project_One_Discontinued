@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>bossstate = states.bossbegin;
-shootangle = 225;
+            <string>bossstate = states.bossmiddle;
+global.shootangle = 225;
 //alarm[0]=30;
 buffermiddle = 0;
 </string>
@@ -82,9 +82,13 @@ alarm[0]=30;
         }
     break;
     case states.bossmiddle:
-       if(random(30)&gt;=29){
+       if(buffermiddle%15==0){
             instance_create(x,y,obj_boss_bullet_pattern);
+            global.shootangle+=10;
        }
+       if(global.shootangle&gt;315) global.shootangle=225;
+       buffermiddle++;
+       
     break;
     case states.bossend:
 }
