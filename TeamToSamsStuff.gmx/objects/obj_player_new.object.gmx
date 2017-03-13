@@ -82,13 +82,11 @@ sprite_index = spr_player_idle_new;
           <argument>
             <kind>1</kind>
             <string>scr_player_input(); //Get player input
-
-//Switch case based on if moving or not
+//var shootdir = point_direction(x,y,mouse_x,mouse_y);
 if(key_left || key_right || key_up || key_down)
     action = actions.moving;
 else
     action = actions.idle;
-    
 switch(action)
 {
     case actions.idle:
@@ -100,7 +98,119 @@ switch(action)
     break;
 }
 
-//The case for the slowdown?
+
+/*
+Player facing is based on mouse position, using sub-images of obj's sprite.
+Giving image_index the index of the sub-image to use.
+shootdir will hold a value from 0 to 360 depending on mouse position on screen.
+Changing back to idle sprite from any action sprite is handled with the alarm event on object.
+
+if(shootdir &gt; 330||shootdir  &lt;22.5){
+    image_index = 6; //Face right
+    lenx = 11;
+    leny = 1;
+    if(key_shoot &amp;&amp; global.ammo &gt; 0) //Change to shooting sprite
+    {
+        alarm[0] = 1 * room_speed;
+        //play some sound here
+        instance_create(obj_player_new.x + lenx, obj_player_new.y + leny, obj_bullet);
+        sprite_index = spr_player_shoot;
+    }
+}
+else if(shootdir &gt;22.5&amp;&amp;shootdir&lt;67.5){
+    image_index = 5; //Face upper right
+    lenx = 16;
+    leny = -4;
+    if(key_shoot &amp;&amp; global.ammo &gt; 0) //Change to shooting sprite
+    {
+        alarm[0] = 1 * room_speed;
+        //play some sound here
+        instance_create(obj_player_new.x + lenx, obj_player_new.y + leny, obj_bullet);
+        sprite_index = spr_player_shoot;
+    }
+}
+else if(shootdir&gt;67.5&amp;&amp;shootdir&lt;112.5){
+    image_index = 4; //Face up
+    lenx = 0;
+    leny = 0;
+    if(key_shoot &amp;&amp; global.ammo &gt; 0) //Change to shooting sprite
+    {
+        alarm[0] = 1 * room_speed;
+        //play some sound here
+        instance_create(obj_player_new.x + lenx, obj_player_new.y + leny, obj_bullet);
+        sprite_index = spr_player_shoot;
+    }
+}
+else if(shootdir&gt;112.5&amp;&amp;shootdir&lt;157.5){
+    image_index = 3; //Face upper left
+    lenx = -16;
+    leny = -4;
+    if(key_shoot &amp;&amp; global.ammo &gt; 0) //Change to shooting sprite
+    {
+        alarm[0] = 1 * room_speed;
+        //play some sound here
+        instance_create(obj_player_new.x + lenx, obj_player_new.y + leny, obj_bullet);
+        sprite_index = spr_player_shoot;
+    }
+}
+else if(shootdir&gt;157.5&amp;&amp;shootdir&lt;202.5){
+    image_index = 2; //Face left
+    lenx = -11;
+    leny = 5;
+    if(key_shoot &amp;&amp; global.ammo &gt; 0) //Change to shooting sprite
+    {
+        alarm[0] = 1 * room_speed;
+        //play some sound here
+        instance_create(obj_player_new.x + lenx, obj_player_new.y + leny, obj_bullet);
+        sprite_index = spr_player_shoot;
+    }
+}
+else if(shootdir&gt;202.5&amp;&amp;shootdir&lt;247.5){
+    image_index = 1; //Face lower left
+    lenx = -16;
+    leny = 10;
+    if(key_shoot &amp;&amp; global.ammo &gt; 0) //Change to shooting sprite
+    {
+        alarm[0] = 1 * room_speed;
+        //play some sound here
+        instance_create(obj_player_new.x + lenx, obj_player_new.y + leny, obj_bullet);
+        sprite_index = spr_player_shoot;
+    }
+}
+else if(shootdir&gt;247.5&amp;&amp;shootdir&lt;292.5){
+    image_index = 0; //Face down
+    lenx = -9;
+    leny = 20;
+    if(key_shoot &amp;&amp; global.ammo &gt; 0) //Change to shooting sprite
+    {
+        alarm[0] = 1 * room_speed;
+        //play some sound here
+        instance_create(obj_player_new.x + lenx, obj_player_new.y + leny, obj_bullet);
+        sprite_index = spr_player_shoot;
+    }
+}
+else if(shootdir&gt;292.5&amp;&amp;shootdir&lt;330){
+    image_index = 7; //Face lower right
+    lenx = 0;
+    leny = 12;
+    if(key_shoot &amp;&amp; global.ammo &gt; 0) //Change to shooting sprite
+    {
+        alarm[0] = 1 * room_speed;
+        //play some sound here
+        instance_create(obj_player_new.x + lenx, obj_player_new.y + leny, obj_bullet);
+        sprite_index = spr_player_shoot;
+    }
+}
+*/
+
+//Trying to get movement animation to work right
+/*if (key_left) 
+{
+    sprite_index = spr_player_left_new; //Mouse changes sub image of sprite. Animation wont play.
+    image_index = 0;
+    image_speed = 0.3;
+}
+*/
 /*
 switch(state){
 
