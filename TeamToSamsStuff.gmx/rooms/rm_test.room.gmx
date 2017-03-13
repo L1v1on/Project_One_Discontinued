@@ -67,6 +67,7 @@
     <instance objName="obj_enemy" x="5024" y="3360" name="inst_F318E045" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy" x="4544" y="3136" name="inst_AD9F5607" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy" x="4160" y="3520" name="inst_C2E6A397" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_npc" x="4704" y="3648" name="inst_A27243B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
