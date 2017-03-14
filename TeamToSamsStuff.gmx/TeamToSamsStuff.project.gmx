@@ -158,7 +158,24 @@
     <object>objects\obj_signpost</object>
     <object>objects\obj_tnt_pickup</object>
     <object>objects\obj_main_menu</object>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <object>objects\obj_suicide_enemy</object>
+    <object>objects\obj_spawner</object>
+=======
     <object>objects\obj_npc</object>
+>>>>>>> 6c0071cd5a8143f1763b8b8f9be7e3b826c51ff9
+=======
+>>>>>>> parent of 3c529f6... allu snackbar
+=======
+>>>>>>> parent of 3c529f6... allu snackbar
+=======
+>>>>>>> parent of 3c529f6... allu snackbar
+=======
+>>>>>>> parent of 3c529f6... allu snackbar
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
