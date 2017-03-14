@@ -124,6 +124,7 @@
     <script>scripts\scr_player_idle.gml</script>
     <script>scripts\scr_player_moving.gml</script>
     <script>scripts\scr_player_input.gml</script>
+    <script>scripts\scr_player_shoot.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_game_text</font>

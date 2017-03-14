@@ -82,7 +82,7 @@ sprite_index = spr_player_idle_new;
           <argument>
             <kind>1</kind>
             <string>scr_player_input(); //Get player input
-
+shootdir = point_direction(x, y, mouse_x, mouse_y); //Calc direction mouse is related to player object.
 //Switch case based on if moving or not
 if(key_left || key_right || key_up || key_down)
     action = actions.moving;
